@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+nav{padding: 10px 0; background: #eee; box-shadow: 0 5px 5px #ddd; margin-bottom: 10px}
+nav .container{display: flex; justify-content: space-between; align-items: flex-end}
+nav .menu{padding-bottom: 5px}
+nav .menu ul{margin: 0; padding: 0; list-style: none; display: flex}
+nav .menu ul li{padding-bottom:20px ; position:  relative}
+nav .menu ul li a{padding: 0 20px; text-decoration: none; color: #333; font-weight: bold; font-size: 20px; display: block; transition: all .2s}
+nav .menu ul li a:hover {color: #FB5849}
+nav .menu ul li a.active{color:#378607}
+nav .menu ul ul{flex-direction: column; background-color: #eee; position: absolute; width: 200%; top: 250%; left:  -10%; transition: all 0.5s; opacity: 0; visibility: hidden}
+nav .menu ul ul li{ border-bottom: 1px solid #666}
+nav .menu ul li:hover >ul{ opacity: 1; top: 100%; visibility: visible}
+nav .menu ul ul li a:hover {padding-left: 25px; background: #fff}
+nav .mega-menu{position: absolute; 
+	width: 600%; 
+	left: -300%; 
+	top: 250%; 
+	background: rgba(253,253,253,1); 
+	opacity: all .5s; 
+	visibility: hidden; 
+	opacity: 0; padding-bottom: 5px}
+nav .menu ul li:hover >.mega-menu{visibility: visible; top: 100%; opacity: 1}

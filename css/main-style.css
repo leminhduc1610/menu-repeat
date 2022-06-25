@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+nav{padding: 10px }
+nav ul{ 
+	margin: 0; padding: 0; list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+nav ul li{ position: relative}  
+nav ul li a{
+	text-decoration: none; 
+	color: #fff;
+	padding: 5px 20px;
+	border-radius: 10px;
+	display: block;
+	
+}
+nav ul li a:hover{ border: 1px solid #fff}
+/*-- style cho menu con ----*/
+nav ul ul {
+	position: absolute; 
+	width: 120%; left: 0; 
+	background:  #58732F;
+	border-radius: 15px;
+	flex-direction: column;
+	align-items: flex-start;
+	opacity: 0;top: 450%; 	visibility: hidden;
+	transition: all .5s	
+	/*display:none*/
+}
+nav ul li:hover >ul{  opacity: 1; top: 110%; visibility: visible}
+nav ul ul ul{ position: absolute; left:350%; width: 200px; top: 10% }
+nav ul ul li:hover >ul{  left:120%; top: 0}
+main{ min-height: 500px}
+
+footer{ 
+	min-height: 650px;
+	background-image: url("../images/bg-footer.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding-top: 50px; color: #fff
+
+}
+.banner,.banner-item{ position: relative}
+.banner-caption
+{ 
+	position: absolute; 
+	top: 10%; right: 5%; 
+	width: 50%; color:#fff;
+	background: rgba(0,0,0,0.2); 
+	padding: 20px
+}
+.megaDropdown{ position: relative}
+.megaDropdown .mega-Menu{ 
+	position: absolute; top:200%; align-items: flex-start; justify-content: space-around;
+	width: 800%; left: -250%; background:#eee; transition: all 1s; visibility: hidden; z-index: 99999; opacity: 0
+}
+.megaDropdown .mega-Menu a{  color: #333}
+.megaDropdown .mega-Menu h4{ padding-left: 20px}
+
+.megaDropdown:hover >.mega-Menu{  top: 100%; visibility: visible; opacity: 1}
+
+
+
+
